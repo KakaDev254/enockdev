@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KakaDev Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      .bounce-slow {
+        animation: bounce-slow 2s infinite;
+      }
+      /* Mobile menu slide-down animation */
+      .mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        opacity: 0;
+      }
+      .mobile-menu.open {
+        max-height: 300px; /* Enough to show menu items without covering all screen */
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body
+    class="text-white"
+    style="
+      background-color: #0f172a;
+      background-image: radial-gradient(
+          circle at 25% 20%,
+          rgba(147, 51, 234, 0.25),
+          transparent 70%
+        ),
+        radial-gradient(
+          circle at 85% 75%,
+          rgba(6, 182, 212, 0.25),
+          transparent 70%
+        ),
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(255, 255, 255, 0.05),
+          transparent 80%
+        );
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  >
+    <!-- Navbar -->
+    <nav
+      class="w-full px-8 md:px-12 lg:px-20 flex justify-between items-center py-4 relative"
+    >
+      <div class="text-lg font-bold text-sky-400">KakaDev</div>
+      <ul class="hidden md:flex space-x-8 text-white font-medium">
+        <li><a href="#home" class="hover:text-sky-400">Home</a></li>
+        <li><a href="#about" class="hover:text-sky-400">About</a></li>
+        <li><a href="#projects" class="hover:text-sky-400">Projects</a></li>
+        <li><a href="#skills" class="hover:text-sky-400">Skills</a></li>
+        <li>
+          <a href="#testimonials" class="hover:text-sky-400">Testimonials</a>
+        </li>
+        <li><a href="#contact" class="hover:text-sky-400">Contact</a></li>
+      </ul>
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden text-white focus:outline-none"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu bg-[#0f172a]/95 border-b border-gray-700 px-8 md:px-12 lg:px-20"
+    >
+      <ul class="flex flex-col space-y-4 py-4 text-white font-medium">
+        <li><a href="#home" class="hover:text-sky-400">Home</a></li>
+        <li><a href="#about" class="hover:text-sky-400">About</a></li>
+        <li><a href="#projects" class="hover:text-sky-400">Projects</a></li>
+        <li><a href="#skills" class="hover:text-sky-400">Skills</a></li>
+        <li>
+          <a href="#testimonials" class="hover:text-sky-400">Testimonials</a>
+        </li>
+        <li><a href="#contact" class="hover:text-sky-400">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="w-full px-8 md:px-12 lg:px-20 py-12 md:py-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-8"
+    >
+      <!-- Left Text -->
+      <div class="flex-1 lg:ml-4">
+        <span
+          class="bg-black text-white px-4 py-1 rounded-full text-sm border border-gray-600 inline-block mb-4"
+        >
+          <span class="text-green-400">●</span> Available for new opportunities
+        </span>
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2 leading-tight"
+        >
+          Hi, I'm <span class="text-blue-500">Enock</span><br />
+          <span class="text-cyan-400">Miregwa</span>
+        </h1>
+        <h2 class="text-gray-400 mb-4 text-lg sm:text-xl lg:text-2xl">
+          aka <span class="text-cyan-400">KakaDev</span>
+        </h2>
+        <p
+          class="text-gray-300 max-w-3xl mb-6 text-base sm:text-lg md:text-xl leading-relaxed"
+        >
+          A passionate self-taught
+          <span class="text-purple-400">full-stack developer</span>
+          crafting digital experiences that combine beautiful design with
+          powerful functionality. Specializing in modern web technologies and
+          bringing ideas to life through code.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-6">
+          <a
+            href="#contact"
+            class="bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-3 rounded-lg font-medium hover:opacity-90"
+            >Get In Touch</a
+          >
+          <a
+            href="#about"
+            class="border border-gray-600 px-6 py-3 rounded-lg font-medium hover:border-cyan-400"
+            >Learn More</a
+          >
+        </div>
+        <!-- Social Icons -->
+        <div class="flex space-x-4">
+          <a
+            href="#"
+            class="p-2 border border-gray-600 rounded-lg hover:border-cyan-400"
+            ><i class="bx bxl-github text-2xl"></i
+          ></a>
+          <a
+            href="#"
+            class="p-2 border border-gray-600 rounded-lg hover:border-cyan-400"
+            ><i class="bx bxl-linkedin text-2xl"></i
+          ></a>
+          <a
+            href="#"
+            class="p-2 border border-gray-600 rounded-lg hover:border-cyan-400"
+            ><i class="bx bx-envelope text-2xl"></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Right Image with effects -->
+      <div class="flex-1 relative flex justify-center lg:justify-end lg:mr-4">
+        <div
+          class="border-4 border-gray-700 rounded-xl shadow-lg shadow-cyan-500/20 overflow-hidden w-full max-w-[600px] aspect-[16/9] relative"
+        >
+          <div
+            class="absolute top-4 right-4 bg-[#0f172a]/90 border border-gray-700 p-2 rounded-lg bounce-slow"
+          >
+            <i class="bx bx-code-alt text-cyan-400 text-xl"></i>
+          </div>
+          <img
+            src="assets/enock-hero.jpg"
+            alt="Developer Workspace"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute bottom-4 left-4 bg-[#0f172a]/90 border border-gray-700 p-2 rounded-lg bounce-slow"
+          >
+            <span class="text-purple-400 text-xl">{ }</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="px-8 md:px-12 lg:px-20 py-16 fade-up">
+      <!-- Title & Subtitle -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl sm:text-5xl font-bold">
+          About
+          <span
+            class="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent"
+            >Me</span
+          >
+        </h2>
+        <p class="text-gray-400 mt-3 text-lg">
+          Passionate about creating digital solutions that make a difference
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <!-- Left Content -->
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+            From Curiosity to <span class="text-purple-400">Code</span>
+          </h3>
+          <p class="text-gray-300 mb-4">
+            My journey into web development started with a simple question:
+            <span class="italic">"How do websites work?"</span> That curiosity
+            led me down a path of self-discovery, countless tutorials, and
+            late-night coding sessions that shaped me into the developer I am
+            today.
+          </p>
+          <p class="text-gray-300 mb-6">
+            As a self-taught developer, I've learned to embrace challenges and
+            see every bug as an opportunity to grow. I specialize in both
+            frontend and backend development, with a keen eye for creating
+            seamless user experiences and robust, scalable applications.
+          </p>
+
+          <!-- Skill Tags -->
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="bg-purple-800/50 text-purple-300 px-4 py-1 rounded-full text-sm"
+              >Full-Stack Developer</span
+            >
+            <span
+              class="bg-cyan-800/50 text-cyan-300 px-4 py-1 rounded-full text-sm"
+              >Self-Taught</span
+            >
+            <span
+              class="bg-purple-800/50 text-purple-300 px-4 py-1 rounded-full text-sm"
+              >Problem Solver</span
+            >
+          </div>
+        </div>
+
+        <!-- Right Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="p-6 border border-gray-700 rounded-lg hover:border-cyan-400 transition"
+          >
+            <i class="bx bx-code-alt text-purple-400 text-3xl mb-4"></i>
+            <h4 class="text-lg font-semibold mb-2">Self-Taught Journey</h4>
+            <p class="text-gray-400 text-sm">
+              Started coding with curiosity and determination, mastering
+              technologies through hands-on projects and continuous learning.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="p-6 border border-gray-700 rounded-lg hover:border-cyan-400 transition"
+          >
+            <i class="bx bx-bulb text-purple-400 text-3xl mb-4"></i>
+            <h4 class="text-lg font-semibold mb-2">Problem Solver</h4>
+            <p class="text-gray-400 text-sm">
+              Love tackling complex challenges and turning ideas into elegant,
+              functional solutions that make a real impact.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="p-6 border border-gray-700 rounded-lg hover:border-cyan-400 transition"
+          >
+            <i class="bx bx-book-open text-purple-400 text-3xl mb-4"></i>
+            <h4 class="text-lg font-semibold mb-2">Continuous Learner</h4>
+            <p class="text-gray-400 text-sm">
+              Always exploring new technologies and best practices to stay
+              current with the ever-evolving web development landscape.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="p-6 border border-gray-700 rounded-lg hover:border-cyan-400 transition"
+          >
+            <i class="bx bx-target-lock text-purple-400 text-3xl mb-4"></i>
+            <h4 class="text-lg font-semibold mb-2">Goal-Oriented</h4>
+            <p class="text-gray-400 text-sm">
+              Focused on delivering high-quality code and exceptional user
+              experiences that exceed expectations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bouncing Arrow -->
+    <div class="flex justify-center mt-6">
+      <i class="bx bx-down-arrow-alt text-3xl text-gray-400 bounce-slow"></i>
+    </div>
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Script for Mobile Menu -->
+    <script>
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
