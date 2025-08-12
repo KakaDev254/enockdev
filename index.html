@@ -59,12 +59,21 @@
       background-size: cover;
     "
   >
-    >
     <!-- Navbar -->
     <nav
       class="w-full px-8 md:px-12 lg:px-20 flex justify-between items-center py-4 relative"
     >
-      <div class="text-lg font-bold text-sky-400">KakaDev</div>
+      <!-- Logo + Brand -->
+      <div class="flex items-center space-x-3">
+        <img
+          src="assets/kaka.jpg"
+          alt="KakaDev Logo"
+          class="h-10 w-10 rounded-full object-cover"
+        />
+        <span class="text-lg font-bold text-sky-400">KakaDev</span>
+      </div>
+
+      <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-8 text-white font-medium">
         <li><a href="#home" class="hover:text-sky-400">Home</a></li>
         <li><a href="#about" class="hover:text-sky-400">About</a></li>
@@ -75,6 +84,8 @@
         </li>
         <li><a href="#contact" class="hover:text-sky-400">Contact</a></li>
       </ul>
+
+      <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-btn"
         class="md:hidden text-white focus:outline-none"
@@ -110,7 +121,6 @@
       </ul>
     </div>
 
-    <!-- Hero Section -->
     <!-- Hero Section -->
     <section
       id="home"
@@ -159,19 +169,19 @@
         <!-- Social Icons -->
         <div class="flex space-x-4">
           <a
-            href="#"
+            href="https://github.com/KakaDev254"
             class="p-2 border border-gray-600 rounded-lg hover:border-cyan-400"
           >
             <i class="bx bxl-github text-2xl"></i>
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/enock-miregwa-8557561b3/"
             class="p-2 border border-gray-600 rounded-lg hover:border-cyan-400"
           >
             <i class="bx bxl-linkedin text-2xl"></i>
           </a>
           <a
-            href="#"
+            href="mailto:oswereenock@gmail.com"
             class="p-2 border border-gray-600 rounded-lg hover:border-cyan-400"
           >
             <i class="bx bx-envelope text-2xl"></i>
@@ -318,30 +328,30 @@
         </div>
       </div>
       <div
-        class="max-w-7xl mx-auto px-5 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+        class="max-w-7xl mx-auto px-5 mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
       >
         <!-- Stat 1 -->
         <div>
-          <h2 class="text-blue-500 text-2xl font-bold">3+</h2>
-          <p class="text-white text-sm">Years of Learning</p>
+          <h2 class="text-blue-500 text-3xl sm:text-4xl font-extrabold">3+</h2>
+          <p class="text-white text-base sm:text-lg">Years of Learning</p>
         </div>
 
         <!-- Stat 2 -->
         <div>
-          <h2 class="text-blue-500 text-2xl font-bold">20+</h2>
-          <p class="text-white text-sm">Projects Completed</p>
+          <h2 class="text-blue-500 text-3xl sm:text-4xl font-extrabold">20+</h2>
+          <p class="text-white text-base sm:text-lg">Projects Completed</p>
         </div>
 
         <!-- Stat 3 -->
         <div>
-          <h2 class="text-blue-500 text-2xl font-bold">15+</h2>
-          <p class="text-white text-sm">Technologies Mastered</p>
+          <h2 class="text-blue-500 text-3xl sm:text-4xl font-extrabold">15+</h2>
+          <p class="text-white text-base sm:text-lg">Technologies Mastered</p>
         </div>
 
         <!-- Stat 4 -->
         <div>
-          <h2 class="text-blue-500 text-2xl font-bold">∞</h2>
-          <p class="text-white text-sm">Coffee Cups</p>
+          <h2 class="text-blue-500 text-3xl sm:text-4xl font-extrabold">∞</h2>
+          <p class="text-white text-base sm:text-lg">Coffee Cups</p>
         </div>
       </div>
     </section>
@@ -362,190 +372,11 @@
         </p>
       </div>
 
-      <!-- Projects Grid -->
-      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
-        <!-- Project 1 -->
-        <div
-          class="bg-gradient-to-r from-purple-950 to-blue-950 rounded-xl p-6 border border-gray-800 shadow-lg hover:shadow-xl transition duration-300"
-        >
-          <div
-            class="flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-pink-500 to-purple-500 rounded-lg mb-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 4v16m8-8H4"
-              />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-2">
-            E-Commerce Platform
-          </h3>
-          <p class="text-gray-400 mb-4">
-            A full-stack e-commerce solution with advanced product filtering,
-            secure payment integration, and real-time inventory management.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span
-              class="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm"
-              >React</span
-            >
-            <span
-              class="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm"
-              >Node.js</span
-            >
-            <span
-              class="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm"
-              >MongoDB</span
-            >
-            <span
-              class="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm"
-              >Stripe</span
-            >
-          </div>
-          <div class="flex gap-4">
-            <a
-              href="#"
-              class="flex items-center gap-2 px-4 py-2 bg-purple-700 hover:bg-purple-800 rounded-lg text-white text-sm"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-              Live Demo
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-lg text-white text-sm hover:bg-gray-800"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 18l6-6-6-6M8 6l-6 6 6 6"
-                />
-              </svg>
-              Code
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div
-          class="bg-gradient-to-r from-purple-950 to-blue-950 rounded-xl p-6 border border-gray-800 shadow-lg hover:shadow-xl transition duration-300"
-        >
-          <div
-            class="flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-blue-500 to-cyan-500 rounded-lg mb-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 9l4-4 4 4m0 6l-4 4-4-4"
-              />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-2">
-            Task Management App
-          </h3>
-          <p class="text-gray-400 mb-4">
-            Collaborative project management tool with real-time updates, team
-            collaboration features, and intuitive drag-and-drop interface.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span
-              class="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm"
-              >Vue.js</span
-            >
-            <span
-              class="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm"
-              >Express</span
-            >
-            <span
-              class="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm"
-              >Socket.io</span
-            >
-            <span
-              class="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm"
-              >PostgreSQL</span
-            >
-          </div>
-          <div class="flex gap-4">
-            <a
-              href="#"
-              class="flex items-center gap-2 px-4 py-2 bg-purple-700 hover:bg-purple-800 rounded-lg text-white text-sm"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-              Live Demo
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-lg text-white text-sm hover:bg-gray-800"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 18l6-6-6-6M8 6l-6 6 6 6"
-                />
-              </svg>
-              Code
-            </a>
-          </div>
-        </div>
-      </div>
+      <!-- Projects Grid (JS will populate here) -->
+      <div
+        id="projects-grid"
+        class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8"
+      ></div>
 
       <!-- View All Projects Button -->
       <div class="mt-12 text-center">
@@ -617,20 +448,21 @@
                   ></div>
                 </div>
               </div>
+
               <div>
                 <p class="flex justify-between text-gray-300 text-sm">
-                  TypeScript <span>85%</span>
+                  HTML <span>95%</span>
                 </p>
                 <div class="w-full bg-gray-800 h-2 rounded-full">
                   <div
-                    class="bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full"
-                    style="width: 85%"
+                    class="bg-gradient-to-r from-green-400 to-emerald-500 h-2 rounded-full"
+                    style="width: 80%"
                   ></div>
                 </div>
               </div>
               <div>
-                <p class="flex justify-between text-gray-300 text-sm">
-                  Vue.js <span>80%</span>
+                <p class="flex justify-between text-blue-300 text-sm">
+                  Bootstrap <span>90%</span>
                 </p>
                 <div class="w-full bg-gray-800 h-2 rounded-full">
                   <div
@@ -646,6 +478,17 @@
                 <div class="w-full bg-gray-800 h-2 rounded-full">
                   <div
                     class="bg-gradient-to-r from-pink-400 to-purple-500 h-2 rounded-full"
+                    style="width: 92%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <p class="flex justify-between text-gray-300 text-sm">
+                  Javascript <span>82%</span>
+                </p>
+                <div class="w-full bg-gray-800 h-2 rounded-full">
+                  <div
+                    class="bg-gradient-to-r from-orange-400 to-purple-500 h-2 rounded-full"
                     style="width: 92%"
                   ></div>
                 </div>
@@ -687,7 +530,18 @@
               </div>
               <div>
                 <p class="flex justify-between text-gray-300 text-sm">
-                  Express/FastAPI <span>85%</span>
+                  Django <span>85%</span>
+                </p>
+                <div class="w-full bg-purple-600 h-2 rounded-full">
+                  <div
+                    class="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <p class="flex justify-between text-gray-300 text-sm">
+                  Express/FastAPI <span>75%</span>
                 </p>
                 <div class="w-full bg-gray-800 h-2 rounded-full">
                   <div
@@ -698,7 +552,7 @@
               </div>
               <div>
                 <p class="flex justify-between text-gray-300 text-sm">
-                  REST APIs <span>90%</span>
+                  REST APIs <span>80%</span>
                 </p>
                 <div class="w-full bg-gray-800 h-2 rounded-full">
                   <div
@@ -722,7 +576,7 @@
             <div class="space-y-4">
               <div>
                 <p class="flex justify-between text-gray-300 text-sm">
-                  MongoDB <span>82%</span>
+                  MySQL <span>82%</span>
                 </p>
                 <div class="w-full bg-gray-800 h-2 rounded-full">
                   <div
@@ -755,7 +609,7 @@
               </div>
               <div>
                 <p class="flex justify-between text-gray-300 text-sm">
-                  Docker <span>70%</span>
+                  Figma <span>70%</span>
                 </p>
                 <div class="w-full bg-gray-800 h-2 rounded-full">
                   <div
@@ -919,7 +773,7 @@
                   </div>
                   <div>
                     <p class="text-gray-400 text-sm">Phone</p>
-                    <p class="font-semibold">+254 700 000 000</p>
+                    <p class="font-semibold">+254 796 956 134</p>
                   </div>
                 </div>
                 <div class="flex items-center gap-4">
@@ -927,21 +781,25 @@
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-6 w-6 text-white"
-                      fill="none"
+                      fill="currentColor"
                       viewBox="0 0 24 24"
-                      stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 11c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2zm0 0c-4.418 0-8 1.79-8 4v1h16v-1c0-2.21-3.582-4-8-4z"
+                        d="M12.04 2C6.49 2 2 6.48 2 12.02c0 2.14.56 4.14 1.63 5.92L2 22l4.2-1.54c1.71.93 3.62 1.42 5.8 1.42h.01c5.55 0 10.04-4.48 10.04-10.02S17.59 2 12.04 2zm5.9 14.3c-.25.7-1.45 1.34-2 1.43-.53.09-1.2.12-1.94-.12-.45-.14-1.03-.33-1.77-.65-3.12-1.35-5.14-4.48-5.3-4.69-.15-.21-1.27-1.69-1.27-3.22s.8-2.28 1.09-2.59c.25-.27.66-.39 1.05-.39.13 0 .25 0 .36.01.32.01.48.03.69.53.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.09.19-.14.31-.28.48-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.17.27.75 1.24 1.61 2.01 1.11.99 2.04 1.3 2.34 1.45.3.15.48.13.66-.08.18-.21.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.34.07.12.07.7-.18 1.4z"
                       />
                     </svg>
                   </div>
                   <div>
-                    <p class="text-gray-400 text-sm">Location</p>
-                    <p class="font-semibold">Nairobi, Kenya</p>
+                    <p class="text-gray-400 text-sm">WhatsApp</p>
+                    <p class="font-semibold">
+                      <a
+                        href="https://wa.me/254796946134"
+                        target="_blank"
+                        class="text-green-500 hover:underline"
+                      >
+                        +254 796 956 678
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -952,22 +810,22 @@
               <h3 class="text-xl font-semibold mb-6">Follow Me</h3>
               <div class="flex gap-4">
                 <a
-                  href="#"
+                  href="https://github.com/KakaDev254"
                   class="p-3 bg-[#1a2332] rounded-lg hover:bg-purple-600 transition"
                 >
                   <i class="fab fa-github text-2xl"></i>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/enock-miregwa-8557561b3/"
                   class="p-3 bg-[#1a2332] rounded-lg hover:bg-purple-600 transition"
                 >
                   <i class="fab fa-linkedin text-2xl"></i>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.tiktok.com/@kaka_kk01?lang=en"
                   class="p-3 bg-[#1a2332] rounded-lg hover:bg-purple-600 transition"
                 >
-                  <i class="fab fa-twitter text-2xl"></i>
+                  <i class="fab fa-tiktok text-2xl"></i>
                 </a>
               </div>
             </div>
@@ -1019,5 +877,6 @@
         mobileMenu.classList.toggle("open");
       });
     </script>
+    <script src="projects.js"></script>
   </body>
 </html>
